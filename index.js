@@ -648,7 +648,7 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-              "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
+              "content": `${brand} Report is generated based on following information. Now you can download.`,
               "report": [
                 {
                   "reportLink":{
@@ -672,7 +672,7 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-              "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
+              "content": `${brand} Report is generated based on following information. Now you can download.`,
               "report": [
                 {
                   "reportLink":{
