@@ -11,8 +11,8 @@ server.use(bodyParser.urlencoded({
 
 server.use(bodyParser.json());
 
-var vivekReport;
-var matahisReport;
+var vivekReport = [];
+var matahisReport = [];
 var matahisReportType;
 var vivekReportType ;
 
@@ -661,7 +661,7 @@ server.post("/marcedes", function (req, res) {
               ]
             }
           }];
-        matahisReport = report.slice();
+        matahisReport = report;
         return res.json({
           "messages": report
         });
@@ -687,7 +687,7 @@ server.post("/marcedes", function (req, res) {
               ]
             }
           }];
-        vivekReport = report.slice();
+        vivekReport = report;
         return res.json({
           "messages": report
         });
