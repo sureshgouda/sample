@@ -13,6 +13,8 @@ server.use(bodyParser.json());
 
 var vivekReport = [];
 var matahisReport = [];
+var matahisReportType = '';
+var vivekReportType = '';
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
@@ -30,7 +32,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": "Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again? Tell me YES/NO",
+                  "content": `Last time you generated the report for ${matahisReportType} report. Should I generate it again? Tell me YES/NO`,
                   "menu": []
                 }
               }]
@@ -44,7 +46,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": "Last time you generated the report for D2A – Quick Test Duration and D1B2 – Top control Unit fault. Should I generate it again? Tell me YES/NO",
+                  "content": `Last time you generated the report for ${vivekReportType} report. Should I generate it again? Tell me YES/NO`,
                   "menu": []
                 }
               }]
@@ -633,7 +635,14 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
+      var brnad = req.body.result.parameters.report-name3;
+      var branch = req.body.result.parameters.report-name;
+      var series = req.body.result.parameters.report-name1;
+      var vehicletype= req.body.result.parameters.report-name4;
+      var manufactureCode =req.body.result.parameters.report-name2;
+
       if (name == "Mathias") {
+        var matahisReportType = req.body.result.parameters.report-type;
         var report = [
           {
             "type": 0,
@@ -644,7 +653,12 @@ server.post("/marcedes", function (req, res) {
               "content": "$any Report is generated based on following information. Now you can download.",
               "report": [
                 {
-                  "reportLink": ""
+                  "reportLink": "",
+                  "brand":brnad,
+                  "branch":branch,
+                  "series":series,
+                  "vehicletype":vehicletype,
+                  "manufactureCode":manufactureCode
                 }
               ]
             }
@@ -654,6 +668,7 @@ server.post("/marcedes", function (req, res) {
           "messages": report
         });
       } else if (name == "Vivek") {
+        var vivekReportType = req.body.result.parameters.report-type;
         var report = [
           {
             "type": 0,
@@ -664,7 +679,12 @@ server.post("/marcedes", function (req, res) {
               "content": "$any Report is generated based on following information. Now you can download.",
               "report": [
                 {
-                  "reportLink": ""
+                  "reportLink": "",
+                  "brand":brnad,
+                  "branch":branch,
+                  "series":series,
+                  "vehicletype":vehicletype,
+                  "manufactureCode":manufactureCode
                 }
               ]
             }
