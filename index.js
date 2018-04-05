@@ -640,7 +640,7 @@ server.post("/marcedes", function (req, res) {
       var manufactureCode =req.body.result.parameters.report-name2;
 
       if (name == "Mathias") {
-        var matahisReportType = req.body.result.parameters.report-type;
+         matahisReportType = req.body.result.parameters.report-type;
         var report = [
           {
             "type": 0,
@@ -648,7 +648,7 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-              "content": "$any Report is generated based on following information. Now you can download.",
+              "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
               "report": [
                 {
                   "reportLink": "",
@@ -661,12 +661,12 @@ server.post("/marcedes", function (req, res) {
               ]
             }
           }];
-        matahisReport = report;
+        matahisReport = report.slice();
         return res.json({
           "messages": report
         });
       } else if (name == "Vivek") {
-        var vivekReportType = req.body.result.parameters.report-type;
+         vivekReportType = req.body.result.parameters.report-type;
         var report = [
           {
             "type": 0,
@@ -674,7 +674,7 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-              "content": "$any Report is generated based on following information. Now you can download.",
+              "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
               "report": [
                 {
                   "reportLink": "",
@@ -687,7 +687,7 @@ server.post("/marcedes", function (req, res) {
               ]
             }
           }];
-        vivekReport = report;
+        vivekReport = report.slice();
         return res.json({
           "messages": report
         });
