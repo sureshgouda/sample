@@ -14,7 +14,7 @@ server.use(bodyParser.json());
 var vivekReport = [];
 var matahisReport = [];
 var matahisReportType;
-var vivekReportType ;
+var vivekReportType;
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
@@ -184,7 +184,7 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "",
                   "content": `<p> Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.</p><p>I can see that you are new user If you are a new user please register yourself for the training first by clicking on the link.`,
-                     "wbt": [
+                  "wbt": [
                     {
                       "wbtForm": {
                         "img": "assets/img/WBT.png",
@@ -633,89 +633,45 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      var brand = req.body.result.contexts[0].parameters.report-name.original;
-      var branch = req.body.result.contexts[0].parameters.report-name1.original;
-      var series = req.body.result.contexts[0].parameters.report-name2.original;
-      var vehicletype= req.body.result.contexts[0].parameters.vehicle-type.original;
-      var manufactureCode =req.body.result.contexts[0].parameters.report-name3.original;
+      var brand = req.body.result.contexts[0].parameters.report - name.original;
+      var branch = req.body.result.contexts[0].parameters.report - name1.original;
+      var series = req.body.result.contexts[0].parameters.report - name2.original;
+      var vehicletype = req.body.result.contexts[0].parameters.vehicle - type.original;
+      var manufactureCode = req.body.result.contexts[0].parameters.report - name3.original;
 
       if (name == "Mathias") {
-         matahisReportType = req.body.result.parameters.any;
-        var report = [
-          {
-            "type": 0,
-            "speech": ""
-          }, {
-            "payload": {
-              "sequenceId": "",
-              "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
-              "report": [
-                {
-                  "reportLink":{
-                    "link":"",
-                    "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
-                  }
-                }
-              ]
-            }
-          }];
-        matahisReport = report;
+        matahisReportType = req.body.result.parameters.any;
         return res.json({
           "messages": [
             {
               "type": 0,
               "speech": ""
+
             }, {
               "payload": {
-                "sequenceId": "",
                 "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
                 "report": [
                   {
-                    "reportLink":{
-                      "link":"",
-                      "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
-                    }
+                    "reportLink": ""
                   }
                 ]
               }
             }]
         });
       } else if (name == "Vivek") {
-         vivekReportType = req.body.result.parameters.any;
-        var report = [
-          {
-            "type": 0,
-            "speech": ""
-          }, {
-            "payload": {
-              "sequenceId": "",
-              "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
-              "report": [
-                {
-                  "reportLink":{
-                    "link":"",
-                    "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
-                  }
-                }
-              ]
-            }
-          }];
-        vivekReport = report;
+        vivekReportType = req.body.result.parameters.any;
         return res.json({
           "messages": [
             {
               "type": 0,
               "speech": ""
+
             }, {
               "payload": {
-                "sequenceId": "",
                 "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
                 "report": [
                   {
-                    "reportLink":{
-                      "link":"",
-                      "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
-                    }
+                    "reportLink": ""
                   }
                 ]
               }
