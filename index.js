@@ -633,11 +633,11 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      var brand = req.body.contexts[0].parameters.report-name3.original;
-      var branch = req.body.contexts[0].parameters.report-name.original;
-      var series = req.body.contexts[0].parameters.report-name1.original;
-      var vehicletype= req.body.contexts[0].parameters.report-name4.original;
-      var manufactureCode =req.body.contexts[0].parameters.report-name2.original;
+      var brand = req.body.result.contexts[0].parameters.report-name3.original;
+      var branch = req.body.result.contexts[0].parameters.report-name.original;
+      var series = req.body.result.contexts[0].parameters.report-name1.original;
+      var vehicletype= req.body.result.contexts[0].parameters.report-name4.original;
+      var manufactureCode =req.body.result.contexts[0].parameters.report-name2.original;
 
       if (name == "Mathias") {
          matahisReportType = req.body.result.parameters.report-type;
