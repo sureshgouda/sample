@@ -11,8 +11,8 @@ server.use(bodyParser.urlencoded({
 
 server.use(bodyParser.json());
 
-var vivekReport = [];
-var matahisReport = [];
+var vivekReport;
+var matahisReport;
 var matahisReportType;
 var vivekReportType ;
 
