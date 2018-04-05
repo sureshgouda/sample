@@ -651,10 +651,7 @@ server.post("/marcedes", function (req, res) {
                 "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
                 "report": [
                   {
-                    "reportLink":{
-                      "link":"",
-                      "info":['${brand}']
-                    }
+                    "reportLink":""
                   }
                 ]
               }
@@ -673,10 +670,7 @@ server.post("/marcedes", function (req, res) {
                 "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
                 "report": [
                   {
-                    "reportLink":{
-                      "link":"",
-                      "info":['${brand}']
-                    }
+                    "reportLink":""
                   }
                 ]
               }
