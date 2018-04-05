@@ -60,7 +60,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": "<strong>Hi, I'm Lisa, sdfds</strong> and I'm here to assist you . Please choose one of the following topic.",
+                  "content": `<strong>Hi, I'm Lisa, ${matahisReportType} </strong> and I'm here to assist you . Please choose one of the following topic.`,
                   "menu": [
                     {
                       "image": "assets/img/Aqua.png",
