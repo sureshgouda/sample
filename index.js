@@ -13,7 +13,7 @@ server.use(bodyParser.json());
 
 var vivekReport = [];
 var matahisReport = [];
-var matahisReportType ='dsfds';
+var matahisReportType;
 var vivekReportType ;
 
 server.post("/marcedes", function (req, res) {
@@ -32,8 +32,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `Last time you generated the report for ${matahisReportType} report. Should I generate it again? Tell me YES/NO`,
-                  "menu": []
+                  "content": `Last time you generated the report for ${matahisReportType} report. Should I generate it again? Tell me YES/NO`
                 }
               }]
           });
@@ -46,14 +45,44 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `Last time you generated the report for ${vivekReportType} report. Should I generate it again? Tell me YES/NO`,
-                  "menu": []
+                  "content": `Last time you generated the report for ${vivekReportType} report. Should I generate it again? Tell me YES/NO`
                 }
               }]
           });
         } else {
           return res.json({
-            "messages": matahisReport
+            "messages": [
+              {
+                "type": 0,
+                "speech": ""
+              }, {
+                "payload": {
+                  "sequenceId": "",
+                  "content": `<strong>Hi, I'm Lisa, </strong> and I'm here to assist you . Please choose one of the following topic.`,
+                  "menu": [
+                    {
+                      "image": "assets/img/Aqua.png",
+                      "title": "AQUA",
+                      "description": "Advanced Quality Analysis"
+                    },
+                    {
+                      "image": "assets/img/WBT.png",
+                      "title": "WBT",
+                      "description": "Web based Training"
+                    },
+                    {
+                      "image": "assets/img/Report.png",
+                      "title": "REPORT",
+                      "description": "Aqua Reports"
+                    },
+                    {
+                      "image": "assets/img/Support.png",
+                      "title": "SUPPORT",
+                      "description": "Find Solution"
+                    }
+                  ]
+                }
+              }]
           });
         }
       } else {
