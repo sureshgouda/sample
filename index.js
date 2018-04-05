@@ -14,7 +14,7 @@ server.use(bodyParser.json());
 var vivekReport = [];
 var matahisReport = [];
 var matahisReportType;
-var vivekReportType ;
+var vivekReportType;
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
@@ -184,7 +184,7 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "",
                   "content": `<p> Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.</p><p>I can see that you are new user If you are a new user please register yourself for the training first by clicking on the link.`,
-                     "wbt": [
+                  "wbt": [
                     {
                       "wbtForm": {
                         "img": "assets/img/WBT.png",
@@ -633,14 +633,14 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      var brnad = req.body.result.parameters.report-name3;
-      var branch = req.body.result.parameters.report-name;
-      var series = req.body.result.parameters.report-name1;
-      var vehicletype= req.body.result.parameters.report-name4;
-      var manufactureCode =req.body.result.parameters.report-name2;
+      var brnad = req.body.result.parameters.report - name3;
+      var branch = req.body.result.parameters.report - name;
+      var series = req.body.result.parameters.report - name1;
+      var vehicletype = req.body.result.parameters.report - name4;
+      var manufactureCode = req.body.result.parameters.report - name2;
 
       if (name == "Mathias") {
-         matahisReportType = req.body.result.parameters.report-type;
+        matahisReportType = req.body.result.parameters.report - type;
         var report = [
           {
             "type": 0,
@@ -651,12 +651,10 @@ server.post("/marcedes", function (req, res) {
               "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
               "report": [
                 {
-                  "reportLink": "",
-                  "brand":`${brnad}`,
-                  "branch":`${branch}`,
-                  "series":`${series}`,
-                  "vehicletype":`${vehicletype}`,
-                  "manufactureCode":`${manufactureCode}`
+                  "reportLink": {
+                    "link": "",
+                    "info": [`${brnad}`, `${branch}`, `${series}`, `${vehicletype}`, `${manufactureCode}`]
+                  }
                 }
               ]
             }
@@ -666,7 +664,7 @@ server.post("/marcedes", function (req, res) {
           "messages": report
         });
       } else if (name == "Vivek") {
-         vivekReportType = req.body.result.parameters.report-type;
+        vivekReportType = req.body.result.parameters.report - type;
         var report = [
           {
             "type": 0,
@@ -677,12 +675,10 @@ server.post("/marcedes", function (req, res) {
               "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
               "report": [
                 {
-                  "reportLink": "",
-                  "brand":`${brnad}`,
-                  "branch":`${branch}`,
-                  "series":`${series}`,
-                  "vehicletype":`${vehicletype}`,
-                  "manufactureCode":`${manufactureCode}`
+                  "reportLink": {
+                    "link": "",
+                    "info": [`${brnad}`, `${branch}`, `${series}`, `${vehicletype}`, `${manufactureCode}`]
+                  }
                 }
               ]
             }
