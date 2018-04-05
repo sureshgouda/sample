@@ -53,38 +53,7 @@ server.post("/marcedes", function (req, res) {
           });
         } else {
           return res.json({
-            "messages": [
-              {
-                "type": 0,
-                "speech": ""
-              }, {
-                "payload": {
-                  "sequenceId": "",
-                  "content": `<strong>Hi, I'm Lisa, ${matahisReportType} </strong> and I'm here to assist you . Please choose one of the following topic.`,
-                  "menu": [
-                    {
-                      "image": "assets/img/Aqua.png",
-                      "title": "AQUA",
-                      "description": "Advanced Quality Analysis"
-                    },
-                    {
-                      "image": "assets/img/WBT.png",
-                      "title": "WBT",
-                      "description": "Web based Training"
-                    },
-                    {
-                      "image": "assets/img/Report.png",
-                      "title": "REPORT",
-                      "description": "Aqua Reports"
-                    },
-                    {
-                      "image": "assets/img/Support.png",
-                      "title": "SUPPORT",
-                      "description": "Find Solution"
-                    }
-                  ]
-                }
-              }]
+            "messages": matahisReport
           });
         }
       } else {
