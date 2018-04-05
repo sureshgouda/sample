@@ -13,8 +13,8 @@ server.use(bodyParser.json());
 
 var vivekReport = [];
 var matahisReport = [];
-var matahisReportType = '';
-var vivekReportType = '';
+var matahisReportType ='dsfds';
+var vivekReportType ;
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
