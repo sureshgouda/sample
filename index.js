@@ -14,7 +14,7 @@ server.use(bodyParser.json());
 var vivekReport = [];
 var matahisReport = [];
 var matahisReportType;
-var vivekReportType;
+var vivekReportType ;
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
@@ -184,7 +184,7 @@ server.post("/marcedes", function (req, res) {
                 "payload": {
                   "sequenceId": "",
                   "content": `<p> Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.</p><p>I can see that you are new user If you are a new user please register yourself for the training first by clicking on the link.`,
-                  "wbt": [
+                     "wbt": [
                     {
                       "wbtForm": {
                         "img": "assets/img/WBT.png",
@@ -633,14 +633,14 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      var brnad = req.body.result.parameters.report-name3.original;
-      var branch = req.body.result.parameters.report-name.original;
-      var series = req.body.result.parameters.report-name1.original;
-      var vehicletype = req.body.result.parameters.report-name4.original;
-      var manufactureCode = req.body.result.parameters.report-name2.original;
+      var brand = req.body.result.contexts[0].parameters.report-name3.original;
+      var branch = req.body.result.contexts[0].parameters.report-name.original;
+      var series = req.body.result.contexts[0].parameters.report-name1.original;
+      var vehicletype= req.body.result.contexts[0].parameters.report-name4.original;
+      var manufactureCode =req.body.result.contexts[0].parameters.report-name2.original;
 
       if (name == "Mathias") {
-        matahisReportType = req.body.result.parameters.report - type;
+         matahisReportType = req.body.result.parameters.report-type;
         var report = [
           {
             "type": 0,
@@ -648,12 +648,12 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-              "content": `${matahisReportType} ${brnad} ${branch} ${series} ${vehicletype} ${manufactureCode} Report is generated based on following information. Now you can download.`,
+              "content": `${matahisReportType} ${brand} Report is generated based on following information. Now you can download.`,
               "report": [
                 {
-                  "reportLink": {
-                    "link": "",
-                    "info": [`${brnad}`, `${branch}`, `${series}`, `${vehicletype}`, `${manufactureCode}`]
+                  "reportLink":{
+                    "link":"",
+                    "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
                   }
                 }
               ]
@@ -664,7 +664,7 @@ server.post("/marcedes", function (req, res) {
           "messages": report
         });
       } else if (name == "Vivek") {
-        vivekReportType = req.body.result.parameters.report - type;
+         vivekReportType = req.body.result.parameters.report-type;
         var report = [
           {
             "type": 0,
@@ -672,12 +672,12 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-              "content": `${vivekReportType} ${brnad} ${branch} ${series} ${vehicletype} ${manufactureCode} Report is generated based on following information. Now you can download.`,
+              "content": `${vivekReportType} ${brand} Report is generated based on following information. Now you can download.`,
               "report": [
                 {
-                  "reportLink": {
-                    "link": "",
-                    "info": [`${brnad}`, `${branch}`, `${series}`, `${vehicletype}`, `${manufactureCode}`]
+                  "reportLink":{
+                    "link":"",
+                    "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
                   }
                 }
               ]
