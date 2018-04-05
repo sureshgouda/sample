@@ -648,11 +648,12 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-              "content": ` ${matahisReportType} Report is generated based on following information. Now you can download.`,
+              "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
               "report": [
                 {
                   "reportLink":{
-                    "link":""
+                    "link":"",
+                    "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
                   }
                 }
               ]
@@ -675,7 +676,8 @@ server.post("/marcedes", function (req, res) {
               "report": [
                 {
                   "reportLink":{
-                    "link":""
+                    "link":"",
+                    "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
                   }
                 }
               ]
