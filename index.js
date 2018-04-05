@@ -652,11 +652,11 @@ server.post("/marcedes", function (req, res) {
               "report": [
                 {
                   "reportLink": "",
-                  "brand":brnad,
-                  "branch":branch,
-                  "series":series,
-                  "vehicletype":vehicletype,
-                  "manufactureCode":manufactureCode
+                  "brand":`${brnad}`,
+                  "branch":`${branch}`,
+                  "series":`${series}`,
+                  "vehicletype":`${vehicletype}`,
+                  "manufactureCode":`${manufactureCode}`
                 }
               ]
             }
@@ -678,11 +678,11 @@ server.post("/marcedes", function (req, res) {
               "report": [
                 {
                   "reportLink": "",
-                  "brand":brnad,
-                  "branch":branch,
-                  "series":series,
-                  "vehicletype":vehicletype,
-                  "manufactureCode":manufactureCode
+                  "brand":`${brnad}`,
+                  "branch":`${branch}`,
+                  "series":`${series}`,
+                  "vehicletype":`${vehicletype}`,
+                  "manufactureCode":`${manufactureCode}`
                 }
               ]
             }
