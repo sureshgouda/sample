@@ -304,33 +304,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `${name} was found to have completed the WBT in a partial manner.Let’s continue from where we left off`,
-                  "wbt": [
-                    {
-                      "wbtList": [
-                        {
-                          "header": "Tips Training Document",
-                          "description": "TIPS training document(Workshop Users day)",
-                          "link": "to the pdf >"
-                        },
-                        {
-                          "header": "Micostatergy Online Course 9",
-                          "description": "The Online course offer an indtroduction in Micostatergy Business Intelligence. the usage of Microstrategy Web..",
-                          "link": "download >"
-                        },
-                        {
-                          "header": "AQUA Tips and Tricks",
-                          "description": "AQUA Tips & Tricks training document(Workshop WSUM 2015)",
-                          "link": "download >"
-                        },
-                        {
-                          "header": "Reports on Inspection",
-                          "description": "The Inspection report overview offers additional information for every inspection report :- Indended use and input… ",
-                          "link": "download >"
-                        }
-                      ]
-                    }
-                  ]
+                  "content": `I’m sorry Mr. Keefer. It looks as if you haven’t completed the WBT yet. Completion of WBT is mandatory as to access the reports. Do you want me to take you to the WBT section?`
                 }
 
               }]
@@ -498,64 +472,118 @@ server.post("/marcedes", function (req, res) {
                         {
                           "title": "Quality reports",
                           "subCategory": [
-                            "P1A",
-                            "P1D"
+                            {
+                              "type": "P1A",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1D",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Hit lists",
                           "subCategory": [
-                            "P1B",
-                            "P1C"
+                            {
+                              "type": "P1B",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1C",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Distributions",
                           "subCategory": [
-                            "P1C1",
-                            "P1E"
+                            {
+                              "type": "P1C1",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1E",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Production reports",
                           "subCategory": [
-                            "P1F",
-                            "P1G"
+                            {
+                              "type": "P1F",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1G",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Audit reports",
                           "subCategory": [
-                            "P1G1",
-                            "P1H"
+                            {
+                              "type": "P1G1",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1H",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Special reports",
                           "subCategory": [
-                            "P1I",
-                            "P1J"
+                            {
+                              "type": "P1I",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1J",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Early warning system",
                           "subCategory": [
-                            "P1K",
-                            "P1L"
+                            {
+                              "type": "P1K",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1L",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Extrapolation",
                           "subCategory": [
-                            "P1M",
-                            "P1N"
+                            {
+                              "type": "P1M",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1N",
+                              "tooltipContent": "two"
+                            }
                           ]
                         },
                         {
                           "title": "Other reports",
                           "subCategory": [
-                            "P1O",
-                            "P1P"
+                            {
+                              "type": "P1O",
+                              "tooltipContent": "one"
+                            },
+                            {
+                              "type": "P1P",
+                              "tooltipContent": "two"
+                            }
                           ]
                         }
                       ]
@@ -633,12 +661,6 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      // var brand = req.body.result.contexts[0].parameters.report - name.original;
-      // var branch = req.body.result.contexts[0].parameters.report - name1.original;
-      // var series = req.body.result.contexts[0].parameters.report - name2.original;
-      // var vehicletype = req.body.result.contexts[0].parameters.vehicle - type.original;
-      // var manufactureCode = req.body.result.contexts[0].parameters.report - name3.original;
-
       if (name == "Mathias") {
         matahisReportType = req.body.result.parameters.any;
        var report = [
