@@ -661,7 +661,24 @@ server.post("/marcedes", function (req, res) {
           }];
         matahisReport = report;
         return res.json({
-          "messages": report
+          "messages": [
+            {
+              "type": 0,
+              "speech": ""
+            }, {
+              "payload": {
+                "sequenceId": "",
+                "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
+                "report": [
+                  {
+                    "reportLink":{
+                      "link":"",
+                      "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
+                    }
+                  }
+                ]
+              }
+            }]
         });
       } else if (name == "Vivek") {
          vivekReportType = req.body.result.parameters.any;
@@ -685,7 +702,24 @@ server.post("/marcedes", function (req, res) {
           }];
         vivekReport = report;
         return res.json({
-          "messages": report
+          "messages": [
+            {
+              "type": 0,
+              "speech": ""
+            }, {
+              "payload": {
+                "sequenceId": "",
+                "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
+                "report": [
+                  {
+                    "reportLink":{
+                      "link":"",
+                      "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
+                    }
+                  }
+                ]
+              }
+            }]
         });
       }
       else {
