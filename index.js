@@ -13,7 +13,8 @@ server.use(bodyParser.json());
 
 var vivekReport = [];
 var matahisReport = [];
-
+var matahisReportType;
+var vivekReportType;
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
@@ -639,42 +640,46 @@ server.post("/marcedes", function (req, res) {
       // var manufactureCode = req.body.result.contexts[0].parameters.report - name3.original;
 
       if (name == "Mathias") {
-       var matahisReportType = req.body.result.parameters.any;
-        return res.json({
-          "messages": [
-            {
-              "type": 0,
-              "speech": ""
+        matahisReportType = req.body.result.parameters.any;
+       var report = [
+        {
+          "type": 0,
+          "speech": ""
 
-            }, {
-              "payload": {
-                "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
-                "report": [
-                  {
-                    "reportLink":""
-                  }
-                ]
+        }, {
+          "payload": {
+            "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
+            "report": [
+              {
+                "reportLink":""
               }
-            }]
+            ]
+          }
+        }];
+        matahisReport = report;
+        return res.json({
+          "messages": report
         });
       } else if (name == "Vivek") {
-       var vivekReportType = req.body.result.parameters.any;
-        return res.json({
-          "messages": [
-            {
-              "type": 0,
-              "speech": ""
+       vivekReportType = req.body.result.parameters.any;
+       var report = [
+        {
+          "type": 0,
+          "speech": ""
 
-            }, {
-              "payload": {
-                "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
-                "report": [
-                  {
-                    "reportLink":""
-                  }
-                ]
+        }, {
+          "payload": {
+            "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
+            "report": [
+              {
+                "reportLink":""
               }
-            }]
+            ]
+          }
+        }];
+        vivekReport = report;
+        return res.json({
+          "messages": report
         });
       }
       else {
