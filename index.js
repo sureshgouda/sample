@@ -653,7 +653,7 @@ server.post("/marcedes", function (req, res) {
                 {
                   "reportLink":{
                     "link":"",
-                    "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
+                    "info":["fgdh","fdg"]
                   }
                 }
               ]
@@ -677,7 +677,7 @@ server.post("/marcedes", function (req, res) {
                 {
                   "reportLink":{
                     "link":"",
-                    "info":[`${brand}`,`${branch}`,`${series}`,`${vehicletype}`,`${manufactureCode}`]
+                    "info":["fgdh","fdg"]
                   }
                 }
               ]
