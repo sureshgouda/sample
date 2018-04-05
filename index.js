@@ -13,8 +13,7 @@ server.use(bodyParser.json());
 
 var vivekReport = [];
 var matahisReport = [];
-var matahisReportType;
-var vivekReportType;
+
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
@@ -633,14 +632,14 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      var brand = req.body.result.contexts[0].parameters.report - name.original;
-      var branch = req.body.result.contexts[0].parameters.report - name1.original;
-      var series = req.body.result.contexts[0].parameters.report - name2.original;
-      var vehicletype = req.body.result.contexts[0].parameters.vehicle - type.original;
-      var manufactureCode = req.body.result.contexts[0].parameters.report - name3.original;
+      // var brand = req.body.result.contexts[0].parameters.report - name.original;
+      // var branch = req.body.result.contexts[0].parameters.report - name1.original;
+      // var series = req.body.result.contexts[0].parameters.report - name2.original;
+      // var vehicletype = req.body.result.contexts[0].parameters.vehicle - type.original;
+      // var manufactureCode = req.body.result.contexts[0].parameters.report - name3.original;
 
       if (name == "Mathias") {
-        matahisReportType = req.body.result.parameters.any;
+       var matahisReportType = req.body.result.parameters.any;
         return res.json({
           "messages": [
             {
@@ -659,7 +658,7 @@ server.post("/marcedes", function (req, res) {
             }]
         });
       } else if (name == "Vivek") {
-        vivekReportType = req.body.result.parameters.any;
+       var vivekReportType = req.body.result.parameters.any;
         return res.json({
           "messages": [
             {
