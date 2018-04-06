@@ -669,6 +669,12 @@ server.post("/marcedes", function (req, res) {
       var name = req.body.result.parameters.name;
       if (name == "Mathias") {
         matahisReportType = req.body.result.parameters.any;
+        var reportLink ;
+        if(matahisReportType == 'P1A'){
+          reportLink = "assets/P1A 20180316044508632.xlsx";
+        }else{
+          reportLink = "assets/P1D 20180316045237963.xlsx";
+        }
        var report = [
         {
           "type": 0,
@@ -679,7 +685,7 @@ server.post("/marcedes", function (req, res) {
             "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
             "report": [
               {
-                "reportLink":""
+                "reportLink":`${reportLink}`
               }
             ]
           }
@@ -690,6 +696,12 @@ server.post("/marcedes", function (req, res) {
         });
       } else if (name == "Vivek") {
        vivekReportType = req.body.result.parameters.any;
+       var reportLink ;
+       if(vivekReportType == 'P1A'){
+         reportLink = "assets/P1A 20180316044508632.xlsx";
+       }else{
+         reportLink = "assets/P1D 20180316045237963.xlsx";
+       }
        var report = [
         {
           "type": 0,
@@ -700,7 +712,7 @@ server.post("/marcedes", function (req, res) {
             "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
             "report": [
               {
-                "reportLink":""
+                "reportLink":`${reportLink}`
               }
             ]
           }
