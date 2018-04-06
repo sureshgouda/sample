@@ -214,12 +214,14 @@ server.post("/marcedes", function (req, res) {
                         {
                           "header": "Tips Training Document",
                           "description": "TIPS training document(Workshop Users day)",
-                          "link": "to the pdf >"
+                          "link": "to the pdf >",
+                          "linkRef":"assets/TIPS-AQUA-Anwendertag-EN.pdf"
                         },
                         {
                           "header": "Micostatergy Online Course 9",
                           "description": "The Online course offer an indtroduction in Micostatergy Business Intelligence. the usage of Microstrategy Web..",
-                          "link": "download >"
+                          "link": "to the link >",
+                          "linkRef":"http://aqua.intra.corpintra.net/downloads/BICC/Einfuehrung/WBT_MSTR9/03_wbt_09_00_en/WEBRA-WEBPRO/MSTR_launch.html"
                         },
                         {
                           "header": "AQUA Tips and Tricks",
