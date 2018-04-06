@@ -189,7 +189,8 @@ server.post("/marcedes", function (req, res) {
                       "wbtForm": {
                         "img": "assets/img/WBT.png",
                         "titel": "Registration form for web based training.",
-                        "subTitle": "Register Now"
+                        "subTitle": "Register Now",
+                        "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
                       }
                     }
                   ]
@@ -287,7 +288,8 @@ server.post("/marcedes", function (req, res) {
                       "wbtForm": {
                         "img": "assets/img/WBT.png",
                         "titel": "Registration form for web based training.",
-                        "subTitle": "Register Now"
+                        "subTitle": "Register Now",
+                        "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
                       }
                     }
                   ]
@@ -430,7 +432,8 @@ server.post("/marcedes", function (req, res) {
                     "wbtForm": {
                       "img": "assets/img/pdf.png",
                       "titel": "Tips training.pdf",
-                      "subTitle": "Open"
+                      "subTitle": "Open",
+                      "link":"assets/TIPS-AQUA-Anwendertag-EN.pdf"
                     }
                   }
                 ]
@@ -609,7 +612,8 @@ server.post("/marcedes", function (req, res) {
                     "wbtForm": {
                       "img": "assets/img/WBT.png",
                       "titel": "Registration form for web based training.",
-                      "subTitle": "Register Now"
+                      "subTitle": "Register Now",
+                      "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
                     }
                   }
                 ]
@@ -720,7 +724,8 @@ server.post("/marcedes", function (req, res) {
                     "wbtForm": {
                       "img": "assets/img/WBT.png",
                       "titel": "Registration form for web based training.",
-                      "subTitle": "Register Now"
+                      "subTitle": "Register Now",
+                      "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
                     }
                   }
                 ]
