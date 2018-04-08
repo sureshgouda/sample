@@ -11,10 +11,10 @@ server.use(bodyParser.urlencoded({
 
 server.use(bodyParser.json());
 
-var vivekReport = [];
+var NicoleReport = [];
 var matahisReport = [];
 var matahisReportType;
-var vivekReportType;
+var NicoleReportType;
 
 server.post("/marcedes", function (req, res) {
   var actions = req.body.result.action;
@@ -22,8 +22,8 @@ server.post("/marcedes", function (req, res) {
   switch (actions) {
     case "welcome":
       var name = req.body.result.parameters.name;
-      if (name == "Mathias" || name == "Vivek") {
-        if (name == "Mathias" && matahisReport.length != 0) {
+      if (name == "Rahul" || name == "Nicole") {
+        if (name == "Rahul" && matahisReport.length != 0) {
           return res.json({
             "messages": [
               {
@@ -36,7 +36,7 @@ server.post("/marcedes", function (req, res) {
                 }
               }]
           });
-        } else if (vivekReport.length != 0) {
+        } else if (NicoleReport.length != 0) {
           return res.json({
             "messages": [
               {
@@ -45,7 +45,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "content": `Last time you generated the report for ${vivekReportType} report. Should I generate it again? Tell me YES/NO`
+                  "content": `Last time you generated the report for ${NicoleReportType} report. Should I generate it again? Tell me YES/NO`
                 }
               }]
           });
@@ -58,25 +58,25 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "content": `<strong>Hi, I'm Lisa, </strong> and I'm here to assist you . Please choose one of the following topic.`,
+                  "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
                   "menu": [
                     {
-                      "image": "assets/img/Aqua.png",
+                      "image": "assets/img/Reportnew .png",
                       "title": "AQUA",
                       "description": "Advanced Quality Analysis"
                     },
                     {
-                      "image": "assets/img/WBT.png",
+                      "image": "assets/img/wbt_icon.png",
                       "title": "WBT",
                       "description": "Web based Training"
                     },
                     {
-                      "image": "assets/img/Report.png",
+                      "image": "assets/img/Reportnew .png",
                       "title": "REPORT",
                       "description": "Aqua Reports"
                     },
                     {
-                      "image": "assets/img/Support.png",
+                      "image": "assets/img/Reportnew .png",
                       "title": "SUPPORT",
                       "description": "Find Solution"
                     }
@@ -97,22 +97,22 @@ server.post("/marcedes", function (req, res) {
                 "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
                 "menu": [
                   {
-                    "image": "assets/img/Aqua.png",
+                    "image": "assets/img/Reportnew .png",
                     "title": "AQUA",
                     "description": "Advanced Quality Analysis"
                   },
                   {
-                    "image": "assets/img/WBT.png",
+                    "image": "assets/img/wbt_icon.png",
                     "title": "WBT",
                     "description": "Web based Training"
                   },
                   {
-                    "image": "assets/img/Report.png",
+                    "image": "assets/img/Reportnew .png",
                     "title": "REPORT",
                     "description": "Aqua Reports"
                   },
                   {
-                    "image": "assets/img/Support.png",
+                    "image": "assets/img/Reportnew .png",
                     "title": "SUPPORT",
                     "description": "Find Solution"
                   }
@@ -124,13 +124,13 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'generated-report':
       var name = req.body.result.parameters.name;
-      if (name == "Mathias") {
+      if (name == "Rahul") {
         return res.json({
           "messages": matahisReport
         });
       } else {
         return res.json({
-          "messages": vivekReport
+          "messages": NicoleReport
         });
       }
       break;
@@ -146,22 +146,22 @@ server.post("/marcedes", function (req, res) {
               "content": "Please choose one of the following topic.",
               "menu": [
                 {
-                  "image": "assets/img/Aqua.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "AQUA",
                   "description": "Advanced Quality Analysis"
                 },
                 {
-                  "image": "assets/img/WBT.png",
+                  "image": "assets/img/wbt_icon.png",
                   "title": "WBT",
                   "description": "Web based Training"
                 },
                 {
-                  "image": "assets/img/Report.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "REPORT",
                   "description": "Aqua Reports"
                 },
                 {
-                  "image": "assets/img/Support.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "SUPPORT",
                   "description": "Find Solution"
                 }
@@ -187,7 +187,7 @@ server.post("/marcedes", function (req, res) {
                   "wbt": [
                     {
                       "wbtForm": {
-                        "img": "assets/img/WBT.png",
+                        "img": "assets/img/wbt_icon.png",
                         "titel": "Registration form for web based training.",
                         "subTitle": "Register Now",
                         "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
@@ -198,7 +198,7 @@ server.post("/marcedes", function (req, res) {
               }]
           });
           break;
-        case "Rahul":
+        case "Nitin":
           return res.json({
             "messages": [
               {
@@ -241,7 +241,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Mathias":
+        case "Rahul":
           return res.json({
             "messages": [
               {
@@ -255,7 +255,7 @@ server.post("/marcedes", function (req, res) {
               }]
           });
           break;
-        case "Vivek":
+        case "Nicole":
           return res.json({
             "messages": [
               {
@@ -288,7 +288,7 @@ server.post("/marcedes", function (req, res) {
                   "wbt": [
                     {
                       "wbtForm": {
-                        "img": "assets/img/WBT.png",
+                        "img": "assets/img/wbt_icon.png",
                         "titel": "Registration form for web based training.",
                         "subTitle": "Register Now",
                         "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
@@ -299,7 +299,7 @@ server.post("/marcedes", function (req, res) {
               }]
           });
           break;
-        case "Rahul":
+        case "Nitin":
           return res.json({
             "messages": [
               {
@@ -315,7 +315,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Mathias":
+        case "Rahul":
           return res.json({
             "messages": [
               {
@@ -364,7 +364,7 @@ server.post("/marcedes", function (req, res) {
 
           });
           break;
-        case "Vivek":
+        case "Nicole":
           return res.json({
             "messages": [
               {
@@ -419,7 +419,7 @@ server.post("/marcedes", function (req, res) {
 
     case "training-info":
       var name = req.body.result.parameters.name;
-      if (name != "Mathias" || name != "Vivek") {
+      if (name != "Rahul" || name != "Nicole") {
         return res.json({
           "messages": [
             {
@@ -428,14 +428,13 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "109",
-                "content": "Opens the PDF link for the document. ",
                 "wbt": [
                   {
+                    "content": "Opens the PDF link for the document.",
                     "wbtForm": {
                       "img": "assets/img/pdf.png",
                       "titel": "Tips training.pdf",
-                      "subTitle": "Open",
-                      "link":"assets/TIPS-AQUA-Anwendertag-EN.pdf"
+                      "subTitle": "Open"
                     }
                   }
                 ]
@@ -459,7 +458,7 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category':
       var name = req.body.result.parameters.name;
-      if (name == "Mathias" || name == "Vivek") {
+      if (name == "Rahul" || name == "Nicole") {
         return res.json({
           "messages": [
             {
@@ -479,11 +478,11 @@ server.post("/marcedes", function (req, res) {
                           "subCategory": [
                             {
                               "type": "P1A",
-                              "tooltipContent": "one"
+                              "tooltipContent": "Complaints per month of production "
                             },
                             {
                               "type": "P1D",
-                              "tooltipContent": "two"
+                              "tooltipContent": "Complaints per month of production by distance"
                             }
                           ]
                         },
@@ -612,7 +611,7 @@ server.post("/marcedes", function (req, res) {
                 "wbt": [
                   {
                     "wbtForm": {
-                      "img": "assets/img/WBT.png",
+                      "img": "assets/img/wbt_icon.png",
                       "titel": "Registration form for web based training.",
                       "subTitle": "Register Now",
                       "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
@@ -667,7 +666,7 @@ server.post("/marcedes", function (req, res) {
       break;
     case 'report-category-detail':
       var name = req.body.result.parameters.name;
-      if (name == "Mathias") {
+      if (name == "Rahul") {
         matahisReportType = req.body.result.parameters.any;
         var reportLink ;
         if(matahisReportType == 'P1A'){
@@ -694,10 +693,10 @@ server.post("/marcedes", function (req, res) {
         return res.json({
           "messages": report
         });
-      } else if (name == "Vivek") {
-       vivekReportType = req.body.result.parameters.any;
+      } else if (name == "Nicole") {
+       NicoleReportType = req.body.result.parameters.any;
        var reportLink ;
-       if(vivekReportType == 'P1A'){
+       if(NicoleReportType == 'P1A'){
          reportLink = "assets/P1A 20180316044508632.xlsx";
        }else{
          reportLink = "assets/P1D 20180316045237963.xlsx";
@@ -709,7 +708,7 @@ server.post("/marcedes", function (req, res) {
 
         }, {
           "payload": {
-            "content": `${vivekReportType} Report is generated based on following information. Now you can download.`,
+            "content": `${NicoleReportType} Report is generated based on following information. Now you can download.`,
             "report": [
               {
                 "reportLink":`${reportLink}`
@@ -717,7 +716,7 @@ server.post("/marcedes", function (req, res) {
             ]
           }
         }];
-        vivekReport = report;
+        NicoleReport = report;
         return res.json({
           "messages": report
         });
@@ -736,7 +735,7 @@ server.post("/marcedes", function (req, res) {
                 "wbt": [
                   {
                     "wbtForm": {
-                      "img": "assets/img/WBT.png",
+                      "img": "assets/img/wbt_icon.png",
                       "titel": "Registration form for web based training.",
                       "subTitle": "Register Now",
                       "link":"https://cism-web.es.corpintra.net/cgi-bin/webTickets/webTicket.pl?t=AQUA_T1_DE_WBT_Anmeldung"
@@ -760,22 +759,22 @@ server.post("/marcedes", function (req, res) {
               "content": "Sorry, I don't  understand your question.Let’s take you to the main menu",
               "menu": [
                 {
-                  "image": "assets/img/Aqua.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "AQUA",
                   "description": "Advanced Quality Analysis"
                 },
                 {
-                  "image": "assets/img/WBT.png",
+                  "image": "assets/img/wbt_icon.png",
                   "title": "WBT",
                   "description": "Web based Training"
                 },
                 {
-                  "image": "assets/img/Report.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "REPORT",
                   "description": "Aqua Reports"
                 },
                 {
-                  "image": "assets/img/Support.png",
+                  "image": "assets/img/Reportnew .png",
                   "title": "SUPPORT",
                   "description": "Find Solution"
                 }
