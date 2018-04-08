@@ -294,7 +294,8 @@ server.post("/marcedes", function (req, res) {
                           "bg": "assets/img/blue.png",
                           "header": "Product Reliability",
                           "description": "The W&G report overview offers additional information for every product reliability report :- Intended use - Lin…",
-                          "link": "to the wiki >"
+                          "link": "to the wiki >",
+                          "user":"Could you give me Product Reliability report? ",
                         },
                         {
                           "image": "assets/img/DR.png",
@@ -343,7 +344,8 @@ server.post("/marcedes", function (req, res) {
                           "bg": "assets/img/blue.png",
                           "header": "Product Reliability",
                           "description": "The W&G report overview offers additional information for every product reliability report :- Intended use - Lin…",
-                          "link": "to the wiki >"
+                          "link": "to the wiki >",
+                          "user":"Could you give me Product Reliability report? ",
                         },
                         {
                           "image": "assets/img/DR.png",
