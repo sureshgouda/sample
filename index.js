@@ -105,22 +105,26 @@ server.post("/marcedes", function (req, res) {
                 {
                   "image": "assets/img/Reportnew .png",
                   "title": "AQUA",
-                  "description": "Advanced Quality Analysis"
+                  "description": "Advanced Quality Analysis",
+                  "user":"What is AQUA?"
                 },
                 {
                   "image": "assets/img/wbt_icon.png",
                   "title": "WBT",
-                  "description": "Web based Training"
+                  "description": "Web based Training",
+                       "user":"Could you take me to the WBT section?"
                 },
                 {
                   "image": "assets/img/Reportnew .png",
                   "title": "REPORT",
-                  "description": "Aqua Reports"
+                  "description": "Aqua Reports",
+                       "user":"Could you take me to the Support section?"
                 },
                 {
                   "image": "assets/img/Reportnew .png",
                   "title": "SUPPORT",
-                  "description": "Find Solution"
+                  "description": "Find Solution",
+                       "user":"Could you take me to the Reports section?"
                 }
               ]
             }
@@ -429,17 +433,20 @@ server.post("/marcedes", function (req, res) {
                   {
                     "category": {
                       "title": "Product Reliability",
+                      "user":"Could you give me Product Reliability report? ",
                       "list": [
                         {
                           "title": "Quality reports",
                           "subCategory": [
                             {
                               "type": "P1A",
-                              "tooltipContent": "Complaints per month of production "
+                              "tooltipContent": "Complaints per month of production ",
+                              "user":"could you give me  P1A report information?"
                             },
                             {
                               "type": "P1D",
-                              "tooltipContent": "Complaints per month of production by distance"
+                              "tooltipContent": "Complaints per month of production by distance",
+                              "user":"could you give me  P1D report information?"
                             }
                           ]
                         },
