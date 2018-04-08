@@ -58,29 +58,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "003",
-                  "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
-                  "menu": [
-                    {
-                      "image": "assets/img/Reportnew .png",
-                      "title": "AQUA",
-                      "description": "Advanced Quality Analysis"
-                    },
-                    {
-                      "image": "assets/img/wbt_icon.png",
-                      "title": "WBT",
-                      "description": "Web based Training"
-                    },
-                    {
-                      "image": "assets/img/Reportnew .png",
-                      "title": "REPORT",
-                      "description": "Aqua Reports"
-                    },
-                    {
-                      "image": "assets/img/Reportnew .png",
-                      "title": "SUPPORT",
-                      "description": "Find Solution"
-                    }
-                  ]
+                  "content": "Hi, Welcome to AQUA. I'm Lisa, I'm here to assist you. How may I help you?"
                 }
               }]
           });
@@ -94,29 +72,8 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "003",
-                "content": "<strong>Hi, I'm Lisa,</strong> and I'm here to assist you . Please choose one of the following topic.",
-                "menu": [
-                  {
-                    "image": "assets/img/Reportnew .png",
-                    "title": "AQUA",
-                    "description": "Advanced Quality Analysis"
-                  },
-                  {
-                    "image": "assets/img/wbt_icon.png",
-                    "title": "WBT",
-                    "description": "Web based Training"
-                  },
-                  {
-                    "image": "assets/img/Reportnew .png",
-                    "title": "REPORT",
-                    "description": "Aqua Reports"
-                  },
-                  {
-                    "image": "assets/img/Reportnew .png",
-                    "title": "SUPPORT",
-                    "description": "Find Solution"
-                  }
-                ]
+                "content": "Hi, Welcome to AQUA. I'm Lisa, I'm here to assist you. How may I help you?"
+    
               }
             }]
         });
@@ -143,7 +100,7 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "",
-              "content": "Please choose one of the following topic.",
+              "content": "Here are some Frequently Asked Questions. You may select one from the list.",
               "menu": [
                 {
                   "image": "assets/img/Reportnew .png",
@@ -183,7 +140,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `<p> Welcome ${name} to WBT. In order to get access to AUQA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and befit from AQUA. Below is the list of training offered by AQUA.</p><p>I can see that you are new user If you are a new user please register yourself for the training first by clicking on the link.`,
+                  "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn from AQUA.</p><p>I can see that you are new user please register yourself for the training first by clicking on the link.`,
                   "wbt": [
                     {
                       "wbtForm": {
@@ -284,7 +241,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "117",
-                  "content": `I can see that you are new user If you are a new user compete all the Web based training in order to generate report. Click on below link for WBT.`,
+                  "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn from AQUA.</p><p>I can see that you are new user please register yourself for the training first by clicking on the link.`,
                   "wbt": [
                     {
                       "wbtForm": {
@@ -681,7 +638,7 @@ server.post("/marcedes", function (req, res) {
 
         }, {
           "payload": {
-            "content": `${matahisReportType} Report is generated based on following information. Now you can download.`,
+            "content": `Here is the report that you have requested`,
             "report": [
               {
                 "reportLink":`${reportLink}`
@@ -708,7 +665,7 @@ server.post("/marcedes", function (req, res) {
 
         }, {
           "payload": {
-            "content": `${NicoleReportType} Report is generated based on following information. Now you can download.`,
+            "content": `Here is the report that you have requested`,
             "report": [
               {
                 "reportLink":`${reportLink}`
@@ -731,7 +688,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "117",
-                "content": `I can see that you are new user If you are a new use compete all the Web based training in order to generate report. Click on below link for WBT.`,
+                "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn from AQUA.</p><p>I can see that you are new user please register yourself for the training first by clicking on the link.`,
                 "wbt": [
                   {
                     "wbtForm": {
@@ -756,7 +713,7 @@ server.post("/marcedes", function (req, res) {
           }, {
             "payload": {
               "sequenceId": "118",
-              "content": "Sorry, I don't  understand your question.Let’s take you to the main menu",
+              "content": "Sorry, I don't  understand your question.Let me take you to the main menu.",
               "menu": [
                 {
                   "image": "assets/img/Reportnew .png",
