@@ -144,7 +144,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn from AQUA.</p><p>I can see that you are new user please register yourself for the training first by clicking on the link.`,
+                  "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
                   "wbt": [
                     {
                       "wbtForm": {
@@ -179,7 +179,7 @@ server.post("/marcedes", function (req, res) {
                           "linkRef":"assets/TIPS-AQUA-Anwendertag-EN.pdf"
                         },
                         {
-                          "header": "Micostatergy Online Course 9",
+                          "header": "Micostategy Online Course 9",
                           "description": "The Online course offer an indtroduction in Micostatergy Business Intelligence. the usage of Microstrategy Web..",
                           "link": "to the link >",
                           "linkRef":"http://aqua.intra.corpintra.net/downloads/BICC/Einfuehrung/WBT_MSTR9/03_wbt_09_00_en/WEBRA-WEBPRO/MSTR_launch.html"
@@ -245,7 +245,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "117",
-                  "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn from AQUA.</p><p>I can see that you are new user please register yourself for the training first by clicking on the link.`,
+                  "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
                   "wbt": [
                     {
                       "wbtForm": {
@@ -285,7 +285,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "105",
-                  "content": "AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.",
+                  "content": " AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please select your intended report from the below list.",
                   "report": [
                     {
                       "reportList": [
@@ -335,7 +335,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "105",
-                  "content": "AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please choose you intended report to see from the below list.",
+                  "content": " AQUA offers a rich set for reports in the form of Standard and Custom reports for the End users. Please select your intended report from the below list.",
                   "report": [
                     {
                       "reportList": [
@@ -352,21 +352,24 @@ server.post("/marcedes", function (req, res) {
                           "bg": "assets/img/orange.png",
                           "header": "Diagnostic Reliability",
                           "description": "The Diagnosis report overview offers additional information for every diagnostic reliability report :- Indended us… ",
-                          "link": "to the link >"
+                          "link": "to the link >",
+                          "user":"Could you give me Diagnostic Reliability report? ",
                         },
                         {
                           "image": "assets/img/ffv-t.png",
                           "bg": "assets/img/purple.png",
                           "header": "FFV-T",
                           "description": "The FFV-T report overview offers additional information for every FFV-T report :-Indended use and input parameter… ",
-                          "link": "to the link >"
+                          "link": "to the link >",
+                          "user":"Could you give me FFV-T report? ",
                         },
                         {
                           "image": "assets/img/inspection.png",
                           "bg": "assets/img/green.png",
                           "header": "Reports on Inspection",
                           "description": "The Inspection report overview offers additional information for every inspection report :- Indended use and input… ",
-                          "link": "to the link >"
+                          "link": "to the link >",
+                          "user":"Could you give me Inspection report? ",
                         }
                       ]
                     }
@@ -393,7 +396,7 @@ server.post("/marcedes", function (req, res) {
                 "sequenceId": "109",
                 "wbt": [
                   {
-                    "content": "Opens the PDF link for the document.",
+                    "content": "Download the Tips Training Document from here :",
                     "wbtForm": {
                       "img": "assets/img/pdf.png",
                       "titel": "Tips training.pdf",
@@ -457,11 +460,14 @@ server.post("/marcedes", function (req, res) {
                           "subCategory": [
                             {
                               "type": "P1B",
-                              "tooltipContent": "one"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1B report information?"
                             },
                             {
                               "type": "P1C",
-                              "tooltipContent": "two"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1C report information?"
+                              
                             }
                           ]
                         },
@@ -470,11 +476,13 @@ server.post("/marcedes", function (req, res) {
                           "subCategory": [
                             {
                               "type": "P1C1",
-                              "tooltipContent": "one"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1C1 report information?"
                             },
                             {
                               "type": "P1E",
-                              "tooltipContent": "two"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1E report information?"
                             }
                           ]
                         },
@@ -483,11 +491,13 @@ server.post("/marcedes", function (req, res) {
                           "subCategory": [
                             {
                               "type": "P1F",
-                              "tooltipContent": "one"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1F report information?"
                             },
                             {
                               "type": "P1G",
-                              "tooltipContent": "two"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1G report information?"
                             }
                           ]
                         },
@@ -496,11 +506,13 @@ server.post("/marcedes", function (req, res) {
                           "subCategory": [
                             {
                               "type": "P1G1",
-                              "tooltipContent": "one"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1G1 report information?"
                             },
                             {
                               "type": "P1H",
-                              "tooltipContent": "two"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1H report information?"
                             }
                           ]
                         },
@@ -509,11 +521,13 @@ server.post("/marcedes", function (req, res) {
                           "subCategory": [
                             {
                               "type": "P1I",
-                              "tooltipContent": "one"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1I report information?"
                             },
                             {
                               "type": "P1J",
-                              "tooltipContent": "two"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1J report information?"
                             }
                           ]
                         },
@@ -522,11 +536,13 @@ server.post("/marcedes", function (req, res) {
                           "subCategory": [
                             {
                               "type": "P1K",
-                              "tooltipContent": "one"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1K report information?"
                             },
                             {
                               "type": "P1L",
-                              "tooltipContent": "two"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1L report information?"
                             }
                           ]
                         },
@@ -535,11 +551,13 @@ server.post("/marcedes", function (req, res) {
                           "subCategory": [
                             {
                               "type": "P1M",
-                              "tooltipContent": "one"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1M report information?"
                             },
                             {
                               "type": "P1N",
-                              "tooltipContent": "two"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1N report information?"
                             }
                           ]
                         },
@@ -548,11 +566,13 @@ server.post("/marcedes", function (req, res) {
                           "subCategory": [
                             {
                               "type": "P1O",
-                              "tooltipContent": "one"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1O report information?"
                             },
                             {
                               "type": "P1P",
-                              "tooltipContent": "two"
+                              "tooltipContent": "Sorry, this report is not available for access at the moment. Please try after sometime.",
+                              "user":"could you give me  P1P report information?"
                             }
                           ]
                         }
@@ -647,7 +667,7 @@ server.post("/marcedes", function (req, res) {
 
         }, {
           "payload": {
-            "content": `Here is the report that you have requested`,
+            "content": `${matahisReportType} report is generated based on the following Vehicle Attributes. Please download the report`,
             "report": [
               {
                 "reportLink":`${reportLink}`
@@ -674,7 +694,7 @@ server.post("/marcedes", function (req, res) {
 
         }, {
           "payload": {
-            "content": `Here is the report that you have requested`,
+            "content": `${NicoleReportType} report is generated based on the following Vehicle Attributes. Please download the report`,
             "report": [
               {
                 "reportLink":`${reportLink}`
@@ -696,8 +716,8 @@ server.post("/marcedes", function (req, res) {
 
             }, {
               "payload": {
-                "sequenceId": "117",
-                "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn from AQUA.</p><p>I can see that you are new user please register yourself for the training first by clicking on the link.`,
+                "sequenceId": "",
+                "content": `<p> Welcome ${name} to WBT. In order to get access to AQUA, AQUA (WBT) Web based training must be performed. AQUA offers a rich WBT set for the user to learn and benefit from AQUA. Below is the list of training offered by AQUA.</p.`,
                 "wbt": [
                   {
                     "wbtForm": {
