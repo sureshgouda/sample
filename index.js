@@ -302,21 +302,24 @@ server.post("/marcedes", function (req, res) {
                           "bg": "assets/img/orange.png",
                           "header": "Diagnostic Reliability",
                           "description": "The Diagnosis report overview offers additional information for every diagnostic reliability report :- Indended us… ",
-                          "link": "to the link >"
+                          "link": "to the link >",
+                          "user":"Could you give me Diagnostic Reliability report? ",
                         },
                         {
                           "image": "assets/img/ffv-t.png",
                           "bg": "assets/img/purple.png",
                           "header": "FFV-T",
                           "description": "The FFV-T report overview offers additional information for every FFV-T report :-Indended use and input parameter… ",
-                          "link": "to the link >"
+                          "link": "to the link >",
+                          "user":"Could you give me FFV-T report? ",
                         },
                         {
                           "image": "assets/img/inspection.png",
                           "bg": "assets/img/green.png",
                           "header": "Reports on Inspection",
                           "description": "The Inspection report overview offers additional information for every inspection report :- Indended use and input… ",
-                          "link": "to the link >"
+                          "link": "to the link >",
+                          "user":"Could you give me Inspection report? ",
                         }
                       ]
                     }
