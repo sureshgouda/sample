@@ -211,7 +211,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `${name} was found to have completed the WBT. now you can access reports.`
+                  "content": `${name} you have already completed the WBT. Would you like to access Reports?`
                 }
               }]
           });
@@ -225,7 +225,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": `${name} was found to have completed the WBT. now you can access reports.`
+                  "content": `${name} you have already completed the WBT. Would you like to access Reports?`
                 }
               }]
           });
@@ -295,7 +295,7 @@ server.post("/marcedes", function (req, res) {
                           "header": "Product Reliability",
                           "description": "The W&G report overview offers additional information for every product reliability report :- Intended use - Lin…",
                           "link": "to the wiki >",
-                          "user":"Could you give me Product Reliability report? ",
+                          "user":"Could you give me Product Reliability report? "
                         },
                         {
                           "image": "assets/img/DR.png",
@@ -303,7 +303,7 @@ server.post("/marcedes", function (req, res) {
                           "header": "Diagnostic Reliability",
                           "description": "The Diagnosis report overview offers additional information for every diagnostic reliability report :- Indended us… ",
                           "link": "to the link >",
-                          "user":"Could you give me Diagnostic Reliability report? ",
+                          "user":"Could you give me Diagnostic Reliability report? "
                         },
                         {
                           "image": "assets/img/ffv-t.png",
@@ -311,7 +311,7 @@ server.post("/marcedes", function (req, res) {
                           "header": "FFV-T",
                           "description": "The FFV-T report overview offers additional information for every FFV-T report :-Indended use and input parameter… ",
                           "link": "to the link >",
-                          "user":"Could you give me FFV-T report? ",
+                          "user":"Could you give me FFV-T report? "
                         },
                         {
                           "image": "assets/img/inspection.png",
@@ -319,7 +319,7 @@ server.post("/marcedes", function (req, res) {
                           "header": "Reports on Inspection",
                           "description": "The Inspection report overview offers additional information for every inspection report :- Indended use and input… ",
                           "link": "to the link >",
-                          "user":"Could you give me Inspection report? ",
+                          "user":"Could you give me Inspection report? "
                         }
                       ]
                     }
@@ -348,7 +348,7 @@ server.post("/marcedes", function (req, res) {
                           "header": "Product Reliability",
                           "description": "The W&G report overview offers additional information for every product reliability report :- Intended use - Lin…",
                           "link": "to the wiki >",
-                          "user":"Could you give me Product Reliability report? ",
+                          "user":"Could you give me Product Reliability report? "
                         },
                         {
                           "image": "assets/img/DR.png",
@@ -356,7 +356,7 @@ server.post("/marcedes", function (req, res) {
                           "header": "Diagnostic Reliability",
                           "description": "The Diagnosis report overview offers additional information for every diagnostic reliability report :- Indended us… ",
                           "link": "to the link >",
-                          "user":"Could you give me Diagnostic Reliability report? ",
+                          "user":"Could you give me Diagnostic Reliability report? "
                         },
                         {
                           "image": "assets/img/ffv-t.png",
@@ -364,7 +364,7 @@ server.post("/marcedes", function (req, res) {
                           "header": "FFV-T",
                           "description": "The FFV-T report overview offers additional information for every FFV-T report :-Indended use and input parameter… ",
                           "link": "to the link >",
-                          "user":"Could you give me FFV-T report? ",
+                          "user":"Could you give me FFV-T report? "
                         },
                         {
                           "image": "assets/img/inspection.png",
@@ -372,7 +372,7 @@ server.post("/marcedes", function (req, res) {
                           "header": "Reports on Inspection",
                           "description": "The Inspection report overview offers additional information for every inspection report :- Indended use and input… ",
                           "link": "to the link >",
-                          "user":"Could you give me Inspection report? ",
+                          "user":"Could you give me Inspection report? "
                         }
                       ]
                     }
