@@ -454,7 +454,7 @@ server.post("/marcedes", function (req, res) {
                             },
                             {
                               "type": "P1D - Complaints per production month after operating time (Q21)",
-                              "tooltipContent": "Complaints per month of production by distance",
+                              "tooltipContent": "Usage Presentation of the number of damages claimed, broken down into the months of production, given for vehicles of the same operating time.",
                               "user": "could you give me  P1D report information?"
                             }
                           ]
