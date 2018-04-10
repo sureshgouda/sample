@@ -168,7 +168,7 @@ server.post("/marcedes", function (req, res) {
               }, {
                 "payload": {
                   "sequenceId": "",
-                  "content": "$name was found to have partially completed the WBT. Let’s continue from where we left off",
+                  "content": `${name} was found to have partially completed the WBT. Let’s continue from where we left off`,
                   "wbt": [
                     {
                       "wbtList": [
@@ -619,7 +619,7 @@ server.post("/marcedes", function (req, res) {
             }, {
               "payload": {
                 "sequenceId": "",
-                "content": "$name was found to have partially completed the WBT. Let’s continue from where we left off",
+                "content": `${name} was found to have partially completed the WBT. Let’s continue from where we left off`,
                 "wbt": [
                   {
                     "wbtList": [
