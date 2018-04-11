@@ -179,8 +179,8 @@ server.post("/marcedes", function (req, res) {
                           "linkRef": "assets/TIPS-AQUA-Anwendertag-EN.pdf"
                         },
                         {
-                          "header": "Micostatergy Online Course 9",
-                          "description": "The Online course offer an introduction in Micostatergy Business Intelligence. The usage of Microstrategy Web..",
+                          "header": "Microstrategy Online Course 9",
+                          "description": "The Online course offer an introduction in Microstrategy Business Intelligence. The usage of Microstrategy Web..",
                           "link": "to the link >",
                           "linkRef": "http://aqua.intra.corpintra.net/downloads/BICC/Einfuehrung/WBT_MSTR9/03_wbt_09_00_en/WEBRA-WEBPRO/MSTR_launch.html"
                         },
@@ -630,8 +630,8 @@ server.post("/marcedes", function (req, res) {
                         "linkRef": "assets/TIPS-AQUA-Anwendertag-EN.pdf"
                       },
                       {
-                        "header": "Micostatergy Online Course 9",
-                        "description": "The Online course offer an introduction in Micostatergy Business Intelligence. The usage of Microstrategy Web..",
+                        "header": "Microstrategy Online Course 9",
+                        "description": "The Online course offer an introduction in Microstrategy Business Intelligence. The usage of Microstrategy Web..",
                         "link": "to the link >",
                         "linkRef": "http://aqua.intra.corpintra.net/downloads/BICC/Einfuehrung/WBT_MSTR9/03_wbt_09_00_en/WEBRA-WEBPRO/MSTR_launch.html"
                       },
